@@ -1,0 +1,216 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  font-weight: @btn-font-weight;  
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  .button-size(@padding-base-vertical; @padding-base-horizontal; 24px; 24px; @border-radius-base);
+  .transition(.2s all ease);
+
+  // &,
+  // &:active,
+  // &.active {
+  //   &:focus,
+  //   &.focus {
+  //     .tab-focus();
+  //   }
+  // }
+ 
+  &:hover
+  // &:focus,
+  // &.focus 
+  {
+    // color: @btn-default-color;
+    .button-variant(@brand-primary; @btn-default-bg; @brand-primary);
+  }
+
+  // &:active,
+  // &.active {
+
+  // }
+
+  // &.disabled,
+  // &[disabled],
+  // fieldset[disabled] & {
+
+  // }
+}
+
+p + .btn_offs{
+  margin-top: 61px;  
+}
+
+@media (max-width: 767px){
+  .btn_offs{
+    margin-bottom: 25px;
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+  &:hover:hover{
+    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+  }
+}
+.btn-primary { 
+  white-space: nowrap; 
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+  
+  span{    
+    position: relative;
+    margin-left: 28px;
+    &:before{
+      position: absolute;
+      font-size: 44px;
+      left: -13px;
+      top: 2px;
+    }
+  }
+  // position: relative;
+  // &:after{
+  //   position: absolute;
+  //   content: '\f105';
+  //   font-family: @fa;
+  //   font-size: 44px;
+  //   top: 0;
+  //   right: 0;
+  // }
+  &:focus{
+    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+  }
+  &:hover{
+    .button-variant(@brand-primary; @white-clr; @brand-primary);
+  }
+}
+// Success appears as green
+.btn-success {
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  display: inline-block;
+  color: @brand-primary;
+  font-weight: normal;
+  border-radius: 0;
+  position: relative;
+  &:before{
+    font-size: 44px;
+    line-height: 45px;
+    // position: absolute;
+    // top:0;
+    // left: 0;
+  }
+  &:focus{
+    color: @brand-primary;
+  }
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover
+  {
+    color: @secondary-clr;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.hov_prime{  
+  &:hover{
+    color: @brand-primary;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;
+  }
+}
+
+.hov_white{  
+  &:hover{
+    color: @white-clr;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

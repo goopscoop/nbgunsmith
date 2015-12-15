@@ -1,0 +1,110 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  // margin-top: 10px;
+  position: relative;
+  .transition(0.3s);
+  // > img,
+  // a > img {
+  //   &:extend(.img-responsive);
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+
+  // Image captions
+  .caption {
+    padding: 23px 30px 21px 28px;  
+    position: absolute;
+    bottom: 0;
+    // left: 50%;
+    // .transform(translate(-50%));  
+    // max-width: 370px;
+    left: 0;
+    right: 0;
+    h3 + .wrap{
+      margin-top: 5px;
+    }
+    .wrap{
+      .clearfix();
+      p{
+        float: left;
+        width: 90%;
+      }
+      a{
+        float: right;
+        margin-top: 8px;
+      }
+      .thumb_ins1{
+        width: 50%;
+      }
+    }    
+  }
+  @media (max-width: 1199px){
+    h3{
+      font-size: 25px;
+    }
+    .caption{
+      padding-right: 17px;
+      padding-left: 20px;
+    }
+    .caption .wrap {
+      p, .thumb_ins1{
+        font-size: 13px;
+        width: 94%;
+      }
+    }
+    .btn-link{
+      &:before{
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }  
+  }
+  @media (max-width: 991px){
+    display: inline-block;
+    max-width: 100%;
+    .caption{
+      *{
+        text-align: left;
+      }
+    }
+  }
+  @media (max-width: 400px){
+    .caption{
+      position: static;
+    }
+  }
+}
+
+.capt_hover1{
+  .transition(0.2s);
+  &:hover{
+    background: @brand-primary;
+    *{
+      color: @white-clr;
+    }
+    .btn-link{
+      color: @white-clr;
+    }
+  }  
+}
+
+.thumb-shadow:hover{
+  box-shadow: 9px 13px 26px -8px @secondary-clr;
+}
+
+.thumbnail1{
+  .caption{
+    margin-top: 32px;
+    * + p{
+      margin-top: 7px;      
+    }
+    h4 a:hover{
+        color: @secondary-clr;
+      }
+  }
+}

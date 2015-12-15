@@ -1,0 +1,28 @@
+/*==================  Stuck menu  ======================*/
+@stuck-bg: rgba(255, 255, 255, 0.9);;
+@stuck-bc: #555;
+
+.stuck_container {
+	// padding: 10px 0;
+}
+
+.isStuck {
+  background: @stuck-bg;
+  z-index: 999;
+  box-shadow: 0 1px 2px #bbb;
+  height: 80px;
+}
+
+@media only screen and (max-width: 992px) {
+  .isStuck {
+    display: none !important;    
+  }
+}
+
+.isStuck .sf-menu ul{
+	top: 80px;  
+}
+
+.isStuck .sf-menu ul ul{
+	top: 0;
+}

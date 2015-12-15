@@ -1,0 +1,40 @@
+/*==================     ToTop     ======================*/
+.toTop {
+  width: 47px;
+  height: 47px;
+  font-size: 24px;
+  line-height: 47px!important;
+  font-weight: 700;
+  color: #fff!important;
+  background: darken(@brand-primary,10%);
+  .border-radius(50%);
+  .transition(.3s);
+  // .box-sizing(border-box);
+  // padding: 10px 0;
+
+
+  position: fixed;
+  right: 66px;
+  bottom: 180px;
+
+  display: none;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 20;
+
+  &:hover {
+    color: #fff;
+    background: @secondary-clr;
+    text-decoration: none;
+    .border-radius(50%);
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 1399px) {
+  .toTop {
+    display: none !important;
+  }
+}
+

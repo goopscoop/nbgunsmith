@@ -1,0 +1,98 @@
+/*==================   Tumbnail    ======================*/
+@overlay-bg: rgba(255,86,57,.3);
+@overlay-icon: @fa-expand;
+@overlay-icon-size: 35px;
+@overlay-icon-color: #fff;
+
+.thumb {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  @media (max-width: 991px){
+     width: 80%; 
+    }
+  @media (max-width: 500px){
+     width: 100%; 
+    }
+
+  img {
+  	width: 100%;
+  	height: auto;
+    .transition(.5s all ease);    
+  }
+
+  &_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    .transition(.3s all ease);
+    color: @overlay-icon-color;
+    background: transparent;
+
+    // &:before {
+    //   content: '';      
+    //   position: absolute;
+    //   width: 70px;
+    //   height: 70px;
+    //   background: url(../images/play.png) no-repeat;
+    //   top: 50%;
+    //   left: 50%;
+    //   right: 0;
+    //   font-weight: 300;            
+    //   margin-top: -36px;      
+    //   margin-left: -36px;    
+    //   opacity: 0;
+    //   .lt-ie9 & {
+    //     display: none;
+    //   }
+    // }
+    // &:after {
+    //   content: '';      
+    //   position: absolute;
+    //   width: 38px;
+    //   height: 38px;
+    //   background: url(../images/thumb.png) no-repeat;
+    //   top: 50%;
+    //   left: 50%;
+    //   right: 0;
+    //   font-weight: 300;            
+    //   margin-top: -20px;      
+    //   margin-left: -20px; 
+    //   opacity: 1;
+    //   .lt-ie9 & {
+    //     display: none;
+    //   }
+    // }
+  }
+  
+  
+  &:hover {
+    .thumb_overlay {
+      opacity: 1;
+      .background(@overlay-bg);
+      &:before{
+        opacity: 1;
+      }
+      .lt-ie9 &:before {
+        display: block;
+      }
+    }
+
+    img {
+      .transform(scale(1.1));
+    }
+  }
+}
+
+.thumb_overl1:hover{
+  .thumb_overlay:before{
+    display: none;
+  }
+  .thumb_overlay:after{
+    opacity: 1;
+  }
+}
