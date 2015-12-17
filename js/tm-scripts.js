@@ -9,7 +9,7 @@ function isIE() {
 
 /* cookie.JS
  ========================================================*/
-include('js/jquery.cookie.js');
+// include('js/jquery.cookie.js');
 
 /* Easing library
  ========================================================*/
@@ -117,47 +117,47 @@ include('js/jquery.easing.1.3.js');
 
 /* Google Map
  ========================================================*/
-;
-(function ($) {
-    var o = document.getElementById("google-map");
-    if (o) {
-        include('//maps.google.com/maps/api/js?sensor=false');
-        include('js/jquery.rd-google-map.js');
+// ;
+// (function ($) {
+//     var o = document.getElementById("google-map");
+//     if (o) {
+//         include('//maps.google.com/maps/api/js?sensor=false');
+//         include('js/jquery.rd-google-map.js');
 
-        $(document).ready(function () {
-            var o = $('#google-map');
-            if (o.length > 0) {
-                o.googleMap();
-            }
-        });
-    }
-})
-(jQuery);
+//         $(document).ready(function () {
+//             var o = $('#google-map');
+//             if (o.length > 0) {
+//                 o.googleMap();
+//             }
+//         });
+//     }
+// })
+// (jQuery);
 
 /* Owl Carousel
 ========================================================*/
-;(function ($) {
-    var o = $('.owl-carousel');
-    if (o.length > 0) {
-        include('js/owl.carousel.min.js');
-        $(document).ready(function () {
-            o.owlCarousel({
-                margin: 30,
-                smartSpeed: 450,
-                loop: true,
-                dots: false,
-                dotsEach: 1,
-                nav: true,
-                navClass: ['owl-prev fa fa-angle-left', 'owl-next fa fa-angle-right'],
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 1},
-                    980: { items: 1}
-                }
-            });
-        });
-    }
-})(jQuery);
+// ;(function ($) {
+//     var o = $('.owl-carousel');
+//     if (o.length > 0) {
+//         include('js/owl.carousel.min.js');
+//         $(document).ready(function () {
+//             o.owlCarousel({
+//                 margin: 30,
+//                 smartSpeed: 450,
+//                 loop: true,
+//                 dots: false,
+//                 dotsEach: 1,
+//                 nav: true,
+//                 navClass: ['owl-prev fa fa-angle-left', 'owl-next fa fa-angle-right'],
+//                 responsive: {
+//                     0: { items: 1 },
+//                     768: { items: 1},
+//                     980: { items: 1}
+//                 }
+//             });
+//         });
+//     }
+// })(jQuery);
 
 
 /* WOW
@@ -236,43 +236,43 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
 
 /* Camera
 ========================================================*/
-;(function ($) {
-var o = $('#camera');
-    if (o.length > 0) {
-        if (!(isIE() && (isIE() > 9))) {
-            include('js/jquery.mobile.customized.min.js');
-        }
+// ;(function ($) {
+// var o = $('#camera');
+//     if (o.length > 0) {
+//         if (!(isIE() && (isIE() > 9))) {
+//             include('js/jquery.mobile.customized.min.js');
+//         }
 
-        include('js/camera.js');
+//         include('js/camera.js');
 
-        $(document).ready(function () {
-            o.camera({
-                autoAdvance: false,
-                height: '29.75609756097561%',
-                minHeight: '350px',
-                pagination: true,
-                thumbnails: false,
-                playPause: false,
-                hover: false,
-                loader: 'none',
-                navigation: false,
-                navigationHover: false,
-                mobileNavHover: false,
-                fx: 'simpleFade'
-            })
-        });
-    }
-})(jQuery);
+//         $(document).ready(function () {
+//             o.camera({
+//                 autoAdvance: false,
+//                 height: '29.75609756097561%',
+//                 minHeight: '350px',
+//                 pagination: true,
+//                 thumbnails: false,
+//                 playPause: false,
+//                 hover: false,
+//                 loader: 'none',
+//                 navigation: false,
+//                 navigationHover: false,
+//                 mobileNavHover: false,
+//                 fx: 'simpleFade'
+//             })
+//         });
+//     }
+// })(jQuery);
 
 /* Search.js
  ========================================================*/
-;
-(function ($) {
-    var o = $('.search-form');
-    if (o.length > 0) {
-        include('js/TMSearch.js');
-    }
-})(jQuery);  
+// ;
+// (function ($) {
+//     var o = $('.search-form');
+//     if (o.length > 0) {
+//         include('js/TMSearch.js');
+//     }
+// })(jQuery);  
 
 /* Booking Form
  ========================================================*/
@@ -295,13 +295,13 @@ var o = $('#camera');
 
 /* Subscribe Form
  ========================================================*/
-;
-(function ($) {
-    var o = $('#subscribe-form');
-    if (o.length > 0) {
-        include('js/sForm.js');
-    }
-})(jQuery);
+// ;
+// (function ($) {
+//     var o = $('#subscribe-form');
+//     if (o.length > 0) {
+//         include('js/sForm.js');
+//     }
+// })(jQuery);
 
 
 
@@ -326,9 +326,9 @@ var o = $('#camera');
 
 /* Parallax
 =============================================*/
-;(function ($) {
-    include('js/jquery.rd-parallax.js');
-})(jQuery); 
+// ;(function ($) {
+//     include('js/jquery.rd-parallax.js');
+// })(jQuery); 
 
 
 
