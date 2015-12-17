@@ -1,0 +1,25 @@
+/*.welcome {
+  background: url('../images/splash1.jpg');
+}*/
+
+.padding {
+  padding: 35px;
+}
+
+.filter-white {
+  background: rgba(255,255,255, 0.5);
+}
+
+.white-bg {
+  background: white;
+}
+
+ul.list-normalized {
+  list-style: circle;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.list-normalized li {
+  list-style: circle;
+}
