@@ -177,13 +177,14 @@ include('js/jquery.easing.1.3.js');
     }
 })(jQuery);
 
+// Contact form commented out for development. Uncomment for originonal theme code.
 /* Mailform
  =============================================*/
 ;
-(function ($) {
-    include('js/mailform/jquery.form.min.js');
-    include('js/mailform/jquery.rd-mailform.js');
-})(jQuery);
+// (function ($) {
+//     include('js/mailform/jquery.form.min.js');
+//     include('js/mailform/jquery.rd-mailform.js');
+// })(jQuery);
 
 
 /* Orientation tablet fix
@@ -272,7 +273,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
 //     if (o.length > 0) {
 //         include('js/TMSearch.js');
 //     }
-// })(jQuery);  
+// })(jQuery);
 
 /* Booking Form
  ========================================================*/
@@ -328,7 +329,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
 =============================================*/
 // ;(function ($) {
 //     include('js/jquery.rd-parallax.js');
-// })(jQuery); 
+// })(jQuery);
 
 
 
