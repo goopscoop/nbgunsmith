@@ -23,3 +23,14 @@ ul.list-normalized {
 .list-normalized li {
   list-style: circle;
 }
+
+/*small adjustments to class instead of attribute*/
+
+.small {
+  font-size: 80%;
+}
+.parallax .wrap strong .small {
+  display: block;
+  margin-top: -3px;
+  font-weight: 300;
+}
