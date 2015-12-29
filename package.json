@@ -1,0 +1,19 @@
+{
+  "name": "nbgunsmith",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "handlebars templates/ >> templates/templates.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goopscoop/nbgunsmith.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goopscoop/nbgunsmith/issues"
+  },
+  "homepage": "https://github.com/goopscoop/nbgunsmith#readme"
+}

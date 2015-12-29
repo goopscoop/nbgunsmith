@@ -1,0 +1,28 @@
+<section class="well well2 bg1">
+  <div class="container">
+  <h2>
+    {{title.bold}}
+    <small>
+      {{title.small}}
+    </small>
+
+  </h2>
+    <div class="row offs1">
+      <div class="col-md-6 col-sm-12">
+        <ul class="link-list wow fadeInLeft" data-wow-duration='2s'>
+          {{#each items}}
+          <li>
+            <a href="{{link}}">
+              {{item}}
+            </a>
+            <a href="#" class="btn-link l-h1 fa-angle-right"></a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img class="width_img" src="{{imagepath}}" alt="">
+      </div>
+    </div>
+  </div>
+</section>
