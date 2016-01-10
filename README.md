@@ -19,3 +19,7 @@ Before merging into master, make sure to run `npm run compile`.
 All behavioral JavaScript files live in the `/js/` directory. Scripts in the root of this directory were pre-built scripts from a purchased theme. Honestly, lot's of those files are unnecessary and seem to be poorly orginized. A future task may include further pruning of many of these files, but for now that's not a priority.
 
 Custom scripts, if needed, will live in subdirectory `/js/src/` with files corrisponding to the route they are adding behavior to (ie `index.js`, or `about.js`, etc).
+
+## HTML
+
+Only the `index.html` file lives in the root of the project. All other HTML files will live in `/pages/` in order to keep the root tidy.
