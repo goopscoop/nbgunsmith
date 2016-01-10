@@ -23,3 +23,7 @@ Custom scripts, if needed, will live in subdirectory `/js/src/` with files corri
 ## HTML
 
 Only the `index.html` file lives in the root of the project. All other HTML files will live in `/pages/` in order to keep the root tidy.
+
+## `/site/`
+
+The `/site/` directory holds template HTML files provided by the theme purchased. These files are to remain unmodified so that they may be used as a reference. Eventually, the use of templates should render these files obsolete.
