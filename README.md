@@ -4,7 +4,7 @@ Website for North Bend gun smith Steve Barrus.
 
 This is a static, front end only site using Handlebars templates and jQuery.
 
-To run, simply open index.html on the root directory.
+To run, start a simple server from the root directory. On my local machine `srv`.
 
 ## Working with Templates
 
