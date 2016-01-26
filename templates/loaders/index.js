@@ -13,9 +13,26 @@ Handlebars.getTemplate = function(name) {
   return Handlebars.templates[name];
 };
 
-var compiledNav = Handlebars.getTemplate('navbar');
+var navBar = Handlebars.getTemplate('navbar')({
+  links: [
+    {
+      name: 'HOME',
+      url: '/',
+      class: 'active'
+    },
+    {
+      name: 'SERVICES',
+      url: './pages/services.html',
+      class: ''
+    },
+    {
+      name: 'INQUIRE',
+      url: '#sumome-contactform-bp',
+      class: ''
+    }
+  ]
+});
 
-var navBar = compiledNav();
 var services = Handlebars.getTemplate('servicelist')({
   title: {
     bold: 'Gun Smithing',
