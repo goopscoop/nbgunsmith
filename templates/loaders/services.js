@@ -14,27 +14,16 @@ Handlebars.getTemplate = function(name) {
 };
 
 var compiledNav = Handlebars.getTemplate('navbar');
-
 var navBar = compiledNav();
-var services = Handlebars.getTemplate('servicelist')({
+
+var featuredServices = Handlebars.getTemplate('featuredlist')({
   title: {
     bold: 'Gun Smithing',
     small: 'services'
-  },
-  items: [
-    {item: 'Purchase Handguns and Firearms', link: '#'},
-    {item: 'AR Builder Sets', link: '#'},
-    {item: 'Ballistic Advantage Barrels', link: '#'},
-    {item: 'Firearm Troubleshooting & Maintenance', link: '#'},
-    {item: 'Handgun & Rifle Deep Cleaning & Inspection', link: '#'},
-    {item: 'Trigger Work & Tuning', link: '#'}
-  ],
-  imagepath: 'images/headshot.jpg'
-});
+  }
+})
 
 $().ready(function(){
   $('#nav-bar').html(navBar)
 
-  //home
-  $('#services-index').html(services)
 });
