@@ -9,17 +9,17 @@
     <div class="row offs3">
       {{#each items}}
       <div class="col-md-4 col-sm-12 col-xs-12">
-        <a class="thumb" data-fancybox-group='1' href="images/page-3_img1_original.jpg">
-          <img class="" src="../images/page-3_img1.jpg" alt="">
+        <a class="thumb" data-fancybox-group='1' href="{{img}}">
+          <img class="" style="overflow:hidden;" src="{{img}}" alt="">
           <span class='thumb_overlay'></span>
         </a>
         <p class="lead">
-          {{item.heading}}
+          {{heading}}
         </p>
         <p class="ins767-1">
-          {{item.description}}
+          {{description}}
           <br /><br />
-          {{item.cta}} {{#if item.link}}<a href="{{link}}" class="btn-link l-h1 fa-angle-right"></a>{{/if}}
+          {{cta}} {{#if link}}<a href="{{link}}" class="btn-link l-h1 fa-angle-right"></a>{{/if}}
         </p>
       </div>
       {{/each}}
