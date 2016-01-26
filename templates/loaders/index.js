@@ -39,10 +39,10 @@ var services = Handlebars.getTemplate('servicelist')({
     small: 'services'
   },
   items: [
-    {item: 'Purchase Handguns and Firearms', link: '#'},
-    {item: 'AR Builder Sets', link: '#'},
-    {item: 'Ballistic Advantage Barrels', link: '#'},
-    {item: 'Firearm Troubleshooting & Maintenance', link: '#'},
+    {item: 'Purchase Handguns and Firearms', link: 'pages/services.html'},
+    {item: 'AR Builder Sets', link: 'pages/services.html'},
+    {item: 'Ballistic Advantage Barrels', link: 'pages/services.html'},
+    {item: 'Firearm Troubleshooting & Maintenance', link: 'pages/services.html'},
   ],
   imagepath: 'images/headshot.jpg'
 });
