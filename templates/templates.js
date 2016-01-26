@@ -179,3 +179,115 @@ templates['servicelist'] = template({"1":function(container,depth0,helpers,parti
     + "\" alt=\"\">\n      </div>\n    </div>\n  </div>\n</section>\n";
 },"useData":true});
 })();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['featuredlist'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "      <div class=\"col-md-4 col-sm-12 col-xs-12\">\n        <a class=\"thumb\" data-fancybox-group='1' href=\"images/page-3_img1_original.jpg\">\n          <img class=\"\" src=\"../images/page-3_img1.jpg\" alt=\"\">\n          <span class='thumb_overlay'></span>\n        </a>\n        <p class=\"lead\">\n          "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.heading : stack1), depth0))
+    + "\n        </p>\n        <p class=\"ins767-1\">\n          "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.description : stack1), depth0))
+    + "\n          <br /><br />\n          "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.cta : stack1), depth0))
+    + " "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : {},((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.link : stack1),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n        </p>\n      </div>\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "<a href=\""
+    + container.escapeExpression(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"link","hash":{},"data":data}) : helper)))
+    + "\" class=\"btn-link l-h1 fa-angle-right\"></a>";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "<section class=\"well well4 bg1\">\n  <div class=\"container\">\n    <h2 class='offs5'>\n      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.bold : stack1), depth0))
+    + "\n      <small>\n        "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.small : stack1), depth0))
+    + "\n      </small>\n    </h2>\n    <div class=\"row offs3\">\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "  </div>\n</section>";
+},"useData":true});
+templates['navbar'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<header>\n  <div class=\"container top-sect\">\n    <div class=\"navbar-header\">\n      <h1 class=\"navbar-brand\">\n        <a  href=\"./\">Steve Barrus<small>SmithWorks - Gunsmithing</small></a>\n      </h1>\n    </div>\n\n    <div class=\"help-box text-right\">\n      <p>Call Now!</p>\n      <a href=\"tel:+14258304067\"> 425-830-4067</a>\n      <small><span>Email:</span>  sbarrus.custompistolsmith@gmail.com</small>\n    </div>\n  </div>\n  <div id=\"stuck_container\" class=\"stuck_container\">\n    <div class=\"container\">\n    <nav class=\"navbar navbar-default navbar-static-top pull-left\">\n\n        <div class=\"\">\n          <ul class=\"nav navbar-nav sf-menu\" data-type=\"navbar\">\n            <li class=\"active\">\n              <a href=\"./\">HOME</a>\n            </li>\n            <!-- <li>\n              <a href=\"index-1.html\">ABOUT</a>\n            </li> -->\n            <!-- <li class=\"dropdown\">\n              <a href=\"index-2.html\">SERVICES<span class=\"glyphicon glyphicon-menu-down\" aria-hidden=\"true\"></span></a>\n              <ul class=\"dropdown-menu\">\n                <li>\n                  <a href=\"#\">Lorem ipsum</a>\n                </li>\n                <li>\n                  <a href=\"#\">Dolor sit amet  </a>\n                </li>\n                <li>\n                  <a href=\"#\">Conse ctetur </a>\n                    <ul class=\"dropdown-menu\">\n                      <li>\n                        <a href=\"#\">Latest</a>\n                      </li>\n                      <li>\n                        <a href=\"#\">Archive</a>\n                      </li>\n                    </ul>\n                </li>\n              </ul>\n            </li>   -->\n            <!-- <li>\n              <a href=\"index-3.html\">PRODUCTS</a>\n            </li> -->\n\n            <li>\n              <a href=\"#sumome-contactform-bp\">INQUIRE</a>\n            </li>\n          </ul>\n        </div>\n    </nav>\n    </div>\n\n  </div>\n</header>";
+},"useData":true});
+templates['servicelist'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "          <li>\n            <a href=\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\">\n              "
+    + alias4(((helper = (helper = helpers.item || (depth0 != null ? depth0.item : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item","hash":{},"data":data}) : helper)))
+    + "\n            </a>\n            <a href=\"#\" class=\"btn-link l-h1 fa-angle-right\"></a>\n          </li>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : {};
+
+  return "<section class=\"well well2 bg1\">\n  <div class=\"container\">\n  <h2>\n    "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.bold : stack1), depth0))
+    + "\n    <small>\n      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.small : stack1), depth0))
+    + "\n    </small>\n\n  </h2>\n    <div class=\"row offs1\">\n      <div class=\"col-md-6 col-sm-12\">\n        <ul class=\"link-list wow fadeInLeft\" data-wow-duration='2s'>\n"
+    + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "        </ul>\n      </div>\n      <div class=\"col-md-6 col-sm-12\">\n        <img class=\"width_img\" src=\""
+    + alias2(((helper = (helper = helpers.imagepath || (depth0 != null ? depth0.imagepath : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias3,{"name":"imagepath","hash":{},"data":data}) : helper)))
+    + "\" alt=\"\">\n      </div>\n    </div>\n  </div>\n</section>\n";
+},"useData":true});
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['featuredlist'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "      <div class=\"col-md-4 col-sm-12 col-xs-12\">\n        <a class=\"thumb\" data-fancybox-group='1' href=\"images/page-3_img1_original.jpg\">\n          <img class=\"\" src=\"../images/page-3_img1.jpg\" alt=\"\">\n          <span class='thumb_overlay'></span>\n        </a>\n        <p class=\"lead\">\n          "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.heading : stack1), depth0))
+    + "\n        </p>\n        <p class=\"ins767-1\">\n          "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.description : stack1), depth0))
+    + "\n          <br /><br />\n          "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.cta : stack1), depth0))
+    + " "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : {},((stack1 = (depth0 != null ? depth0.item : depth0)) != null ? stack1.link : stack1),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n        </p>\n      </div>\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "<a href=\""
+    + container.escapeExpression(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"link","hash":{},"data":data}) : helper)))
+    + "\" class=\"btn-link l-h1 fa-angle-right\"></a>";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "<section class=\"well well4 bg1\">\n  <div class=\"container\">\n    <h2 class='offs5'>\n      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.bold : stack1), depth0))
+    + "\n      <small>\n        "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.small : stack1), depth0))
+    + "\n      </small>\n    </h2>\n    <div class=\"row offs3\">\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "  </div>\n</section>";
+},"useData":true});
+templates['navbar'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<header>\n  <div class=\"container top-sect\">\n    <div class=\"navbar-header\">\n      <h1 class=\"navbar-brand\">\n        <a  href=\"./\">Steve Barrus<small>SmithWorks - Gunsmithing</small></a>\n      </h1>\n    </div>\n\n    <div class=\"help-box text-right\">\n      <p>Call Now!</p>\n      <a href=\"tel:+14258304067\"> 425-830-4067</a>\n      <small><span>Email:</span>  sbarrus.custompistolsmith@gmail.com</small>\n    </div>\n  </div>\n  <div id=\"stuck_container\" class=\"stuck_container\">\n    <div class=\"container\">\n    <nav class=\"navbar navbar-default navbar-static-top pull-left\">\n\n        <div class=\"\">\n          <ul class=\"nav navbar-nav sf-menu\" data-type=\"navbar\">\n            <li class=\"active\">\n              <a href=\"./\">HOME</a>\n            </li>\n            <!-- <li>\n              <a href=\"index-1.html\">ABOUT</a>\n            </li> -->\n            <!-- <li class=\"dropdown\">\n              <a href=\"index-2.html\">SERVICES<span class=\"glyphicon glyphicon-menu-down\" aria-hidden=\"true\"></span></a>\n              <ul class=\"dropdown-menu\">\n                <li>\n                  <a href=\"#\">Lorem ipsum</a>\n                </li>\n                <li>\n                  <a href=\"#\">Dolor sit amet  </a>\n                </li>\n                <li>\n                  <a href=\"#\">Conse ctetur </a>\n                    <ul class=\"dropdown-menu\">\n                      <li>\n                        <a href=\"#\">Latest</a>\n                      </li>\n                      <li>\n                        <a href=\"#\">Archive</a>\n                      </li>\n                    </ul>\n                </li>\n              </ul>\n            </li>   -->\n            <!-- <li>\n              <a href=\"index-3.html\">PRODUCTS</a>\n            </li> -->\n\n            <li>\n              <a href=\"#sumome-contactform-bp\">INQUIRE</a>\n            </li>\n          </ul>\n        </div>\n    </nav>\n    </div>\n\n  </div>\n</header>";
+},"useData":true});
+templates['servicelist'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "          <li>\n            <a href=\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\">\n              "
+    + alias4(((helper = (helper = helpers.item || (depth0 != null ? depth0.item : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item","hash":{},"data":data}) : helper)))
+    + "\n            </a>\n            <a href=\"#\" class=\"btn-link l-h1 fa-angle-right\"></a>\n          </li>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : {};
+
+  return "<section class=\"well well2 bg1\">\n  <div class=\"container\">\n  <h2>\n    "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.bold : stack1), depth0))
+    + "\n    <small>\n      "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.title : depth0)) != null ? stack1.small : stack1), depth0))
+    + "\n    </small>\n\n  </h2>\n    <div class=\"row offs1\">\n      <div class=\"col-md-6 col-sm-12\">\n        <ul class=\"link-list wow fadeInLeft\" data-wow-duration='2s'>\n"
+    + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "        </ul>\n      </div>\n      <div class=\"col-md-6 col-sm-12\">\n        <img class=\"width_img\" src=\""
+    + alias2(((helper = (helper = helpers.imagepath || (depth0 != null ? depth0.imagepath : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias3,{"name":"imagepath","hash":{},"data":data}) : helper)))
+    + "\" alt=\"\">\n      </div>\n    </div>\n  </div>\n</section>\n";
+},"useData":true});
+})();
