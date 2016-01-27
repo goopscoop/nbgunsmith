@@ -34,3 +34,7 @@ ul.list-normalized {
   margin-top: -3px;
   font-weight: 300;
 }
+
+.service-list a {
+  color: #fff;
+}

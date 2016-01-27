@@ -1,4 +1,4 @@
-<section class="well well2 bg1">
+<section class="well well2 {{#if background}}{{background}}{{^}}bg1{{/if}}">
   <div class="container">
   <h2>
     {{title.bold}}
@@ -11,7 +11,7 @@
       <div class="col-md-6 col-sm-12">
         <ul class="link-list wow fadeInLeft" data-wow-duration='2s'>
           {{#each items}}
-          <li>
+          <li class="service-list">
             <a href="{{link}}">
               {{item}}
             </a>
@@ -21,7 +21,8 @@
         </ul>
       </div>
       <div class="col-md-6 col-sm-12">
-        <img class="width_img" src="{{imagepath}}" alt="">
+        {{#if imagepath}}<img class="width_img" src="{{imagepath}}" alt="">{{/if}}
+        {{#if description}}{{{description}}}{{/if}}
       </div>
     </div>
   </div>
