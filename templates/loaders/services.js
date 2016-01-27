@@ -61,10 +61,49 @@ var featuredServices = Handlebars.getTemplate('featuredlist')({
       link: '#sumome-contactform-bp'
     }
   ]
+});
+
+
+var description = '<p><strong>Steve Barrus</strong> is a certified Gunsmith and' +
+  ' certified Law Enforcement Armorer specializing in Glocks & AR’s.' +
+  ' Additional Armorer Certificates Include:</p>' +
+  '<ul class="list-normalized">' +
+    '<li>H & K</li>' +
+    '<li>SIG Auto Pistols</li>' +
+    '<li>Smith & Wesson M & P Semi-Auto and Revolvers</li>' +
+    '<li>Springfield XD</li>' +
+    '<li>Ruger Double Action</li>' +
+    '<li>AR Platform</li>' +
+    '<li>Remington 870 Shotguns</li>' +
+  '</ul><br>' +
+  '<p>Contact Steve Barrus today using the form below to order firearms or to have your gun serviced.</p>'
+
+var detailedServiceList = Handlebars.getTemplate('servicelist')({
+  items: [
+    {
+      item: 'Handguns & Fire Arms – New & Used',
+      link: '#sumome-contactform-bp',
+    },
+    {
+      item: 'AR Builder Sets',
+      link: '#sumome-contactform-bp',
+    },
+    {
+      item: 'Ballistic Advantage Barrels',
+      link: '#sumome-contactform-bp',
+    },
+    {
+      item: 'Gun Smithing',
+      link: '#sumome-contactform-bp',
+    }
+  ],
+  description: description,
+  background: 'bg3'
 })
 
 
 $().ready(function(){
-  $('#nav-bar').html(navBar)
-  $('#featured-services').html(featuredServices)
+  $('#nav-bar').html(navBar);
+  $('#featured-services').html(featuredServices);
+  $('#detailed-service-list').html(detailedServiceList);
 });
